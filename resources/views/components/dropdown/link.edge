@@ -1,0 +1,11 @@
+@set('classes', $props.active ? 'bg-gray-100 text-gray-900 block px-4 py-2 text-sm' : 'text-gray-700 block px-4 py-2 text-sm')
+
+<a
+  {{ $props.serializeExcept(['active']) }}
+  class="{{ classes }}"
+  role="menuitem"
+  tabindex="-1"
+  id="menu-item-0"
+>
+  {{{ await $slots.main() }}}
+</a>
